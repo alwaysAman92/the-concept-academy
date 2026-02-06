@@ -24,7 +24,7 @@ const Hero = () => {
             <Button 
               asChild 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-slate-900 font-medium shadow-md hover:bg-slate-100 hover:shadow-lg transition"
             >
               <Link to="/contact" className="flex items-center gap-2">
                 Enquire Now
@@ -42,22 +42,26 @@ const Hero = () => {
               {/* Founder Photo Placeholder */}
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-primary-foreground/20 border-4 border-primary-foreground/30 mb-6 flex items-center justify-center overflow-hidden">
                 <div className="text-4xl md:text-5xl font-bold text-primary-foreground/40">
-                  RK
+                  VK
                 </div>
               </div>
               
-              <h3 className="text-xl md:text-2xl font-bold mb-2">
-                Dr. Rajesh Kumar
-              </h3>
+              <h3 className="text-white text-lg font-semibold">
+                  Mr. Vinayak Kumar
+                  </h3>
+
               <p className="text-sm text-primary-foreground/70 mb-4">
                 Founder & Director
               </p>
               
-              <blockquote className="text-primary-foreground/90 leading-relaxed italic">
-                "Education is not about memorizing facts—it's about understanding concepts. 
-                When students grasp the 'why' behind every formula, they don't just pass exams; 
-                they develop a love for learning that lasts a lifetime."
-              </blockquote>
+              <section className="py-20 px-6 text-center">
+                <p className="mt-4 text-gray-100 max-w-xl">
+                  At "The Concept Academy", we believe that strong fundamentals are the foundation
+                  of academic excellence. Our goal is to nurture clarity of thought, disciplined
+                  learning, and confidence in every student—helping them succeed in school as
+                  well as competitive exams like JEE and NEET.
+                </p>
+              </section>
             </div>
           </div>
         </div>
