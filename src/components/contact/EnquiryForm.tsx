@@ -10,6 +10,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle } from "lucide-react";
+import { supabase } from "@/lib/supabaseClient";
+
 
 const courses = [
   "Class 9 (Foundation)",
@@ -31,11 +33,25 @@ const EnquiryForm = () => {
     contact: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real app, this would send data to a backend
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const { error } = await supabase.from("enquiries").insert([
+    {
+      name: formData.name,
+      course: formData.course,
+      phone: formData.contact,
+    },
+  ]);
+
+  if (error) {
+    console.error("Supabase error:", error);
+    alert("Something went wrong. Please try again.");
+  } else {
     setIsSubmitted(true);
-  };
+  }
+};
+
 
   if (isSubmitted) {
     return (

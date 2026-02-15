@@ -8,6 +8,10 @@ import Courses from "./pages/Courses";
 import Faculty from "./pages/Faculty";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Admin from "@/pages/Admin";
+import AdminLogin from "@/pages/AdminLogin";
+
+
 
 const queryClient = new QueryClient();
 
@@ -22,7 +26,10 @@ const App = () => (
           <Route path="/courses" element={<Courses />} />
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

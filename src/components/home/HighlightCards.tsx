@@ -45,7 +45,7 @@ const HighlightCards = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
-                <item.icon className="w-7 h-7 text-accent" />
+                <item.icon className="w-7 h-7 text-foreground" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-3">
                 {item.title}
