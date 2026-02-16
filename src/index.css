@@ -7,64 +7,70 @@
 @tailwind utilities;
 
 /* =========================
-   ORANGE DOMINANT BRAND
+   CUSTOM BRAND PALETTE
+   #FF9B51 - Warm Orange (Primary/Accent)
+   #25343F - Deep Blue-Gray (Dark)
+   #BFC9D1 - Soft Blue-Gray (Muted)
+   #EAEFEF - Light Gray (Background)
    ========================= */
 
 @layer base {
   :root {
+    /* HSL Converted Values:
+       #FF9B51 → hsl(24, 100%, 66%)
+       #25343F → hsl(206, 26%, 20%)
+       #BFC9D1 → hsl(204, 17%, 77%)
+       #EAEFEF → hsl(180, 9%, 93%)
+    */
 
-    /* HSL Converted */
-    /* 000000 */
-    /* 0B192C */
-    /* 1E3E62 */
-    /* FF6500 */
+    /* Background - Light Gray */
+    --background: 180 9% 93%; /* #EAEFEF */
+    --foreground: 206 26% 20%; /* #25343F */
 
-    /* Background */
-    --background: 210 30% 97%;
-    --foreground: 217 65% 10%; /* deep navy */
-
-    --card: 0 0% 100%;
-    --card-foreground: 217 65% 10%;
+    /* Cards - White */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 206 26% 20%; /* #25343F */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 217 65% 10%;
+    --popover-foreground: 206 26% 20%;
 
-    /* 🔥 PRIMARY → ORANGE */
-    --primary: 25 100% 50%; /* #FF6500 */
-    --primary-foreground: 0 0% 100%;
+    /* 🔥 PRIMARY → Deep Blue-Gray (for dark sections) */
+    --primary: 206 26% 20%; /* #25343F - for dark sections */
+    --primary-foreground: 180 9% 93%; /* #EAEFEF - light text on dark */
 
-    /* Accent → Steel Blue */
-    --accent: 210 52% 25%; /* #1E3E62 */
-    --accent-foreground: 0 0% 100%;
+    /* 🔥 ACCENT → Warm Orange (Main brand color) */
+    --accent: 24 100% 66%; /* #FF9B51 */
+    --accent-foreground: 206 26% 20%; /* #25343F - dark text on orange */
 
-    /* Secondary → Deep Navy */
-    --secondary: 217 65% 10%; /* #0B192C */
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary → Soft Blue-Gray */
+    --secondary: 204 17% 77%; /* #BFC9D1 */
+    --secondary-foreground: 206 26% 20%; /* #25343F */
 
-    --muted: 210 20% 90%;
-    --muted-foreground: 210 25% 35%;
+    /* Muted → Light variations */
+    --muted: 180 9% 93%; /* #EAEFEF */
+    --muted-foreground: 204 17% 77%; /* #BFC9D1 */
 
-    --destructive: 25 100% 50%;
+    /* Destructive - Keep standard red for errors */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 85%;
-    --input: 210 20% 85%;
+    /* Borders */
+    --border: 204 17% 77%; /* #BFC9D1 */
+    --input: 204 17% 77%; /* #BFC9D1 */
 
-    /* 🔥 Focus Rings Now Orange */
-    --ring: 25 100% 50%;
+    /* 🔥 Focus Rings → Orange */
+    --ring: 24 100% 66%; /* #FF9B51 */
 
     --radius: 1rem;
 
-    /* 🔥 Orange Gradient Hero */
-    --hero-gradient: linear-gradient(
-      135deg,
-      hsl(25 100% 50%) 0%,
-      hsl(210 52% 25%) 100%
-    );
+    /* Solid color instead of gradient */
+    --hero-gradient: hsl(206 26% 20%); /* Solid #25343F */
 
-    --card-shadow: 0 4px 20px -4px hsl(217 65% 10% / 0.08);
-    --card-shadow-hover: 0 8px 30px -4px hsl(217 65% 10% / 0.12);
+    /* Card Shadows */
+    --card-shadow: 0 4px 20px -4px hsl(206 26% 20% / 0.1);
+    --card-shadow-hover: 0 8px 30px -4px hsl(206 26% 20% / 0.15);
 
+    /* Fonts */
     --font-sans: 'Source Sans Pro', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
     --font-serif: 'Source Serif Pro', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
     --font-mono: 'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -75,32 +81,34 @@
      ========================= */
 
   .dark {
+    --background: 206 26% 20%; /* #25343F */
+    --foreground: 180 9% 93%; /* #EAEFEF */
 
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --card: 206 26% 15%; /* Slightly darker than #25343F */
+    --card-foreground: 180 9% 93%;
 
-    --card: 217 65% 10%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 217 65% 10%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 206 26% 15%;
+    --popover-foreground: 180 9% 93%;
 
     /* 🔥 Orange still dominant */
-    --primary: 25 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 206 26% 20%;
+    --primary-foreground: 180 9% 93%;
 
-    --accent: 210 52% 25%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 24 100% 66%; /* #FF9B51 */
+    --accent-foreground: 206 26% 20%;
 
-    --secondary: 217 65% 10%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 204 17% 77%;
+    --secondary-foreground: 206 26% 20%;
 
-    --muted: 210 40% 20%;
-    --muted-foreground: 0 0% 80%;
+    --muted: 206 26% 25%;
+    --muted-foreground: 204 17% 77%;
 
-    --border: 210 40% 20%;
-    --input: 210 40% 20%;
-    --ring: 25 100% 50%;
+    --border: 204 17% 50%;
+    --input: 204 17% 50%;
+    --ring: 24 100% 66%;
+
+    --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --card-shadow-hover: 0 8px 30px -4px hsl(0 0% 0% / 0.4);
   }
 }
 
@@ -124,7 +132,7 @@
 
   /* 🔥 Make links orange by default */
   a {
-    @apply text-primary hover:opacity-80 transition;
+    @apply text-accent hover:opacity-80 transition;
   }
 }
 
@@ -134,7 +142,8 @@
 
 @layer components {
   .hero-gradient {
-    background: var(--hero-gradient);
+    background-color: var(--hero-gradient);
+    @apply text-primary-foreground;
   }
 
   .card-shadow {
@@ -155,6 +164,60 @@
 
   /* 🔥 Orange CTA utility */
   .btn-orange {
-    @apply bg-primary text-primary-foreground hover:opacity-90 transition;
+    @apply bg-accent text-accent-foreground hover:opacity-90 transition shadow-md hover:shadow-lg;
+  }
+
+  /* 🔥 Dark section utility */
+  .section-dark {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  /* 🔥 Light section utility */
+  .section-light {
+    @apply bg-background text-foreground;
+  }
+
+  /* 🔥 Icon box utility (orange background) */
+  .icon-box-orange {
+    @apply w-12 h-12 rounded-xl bg-accent flex items-center justify-center;
+  }
+
+  .icon-box-orange svg {
+    @apply text-accent-foreground;
+  }
+}
+
+/* =========================
+   ANIMATION UTILITIES
+   ========================= */
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
