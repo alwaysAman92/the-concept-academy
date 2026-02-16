@@ -36,27 +36,48 @@ const CourseSection = ({
   return (
     <div className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${isReversed ? "lg:flex-row-reverse" : ""}`}>
       <div className={isReversed ? "lg:order-2" : ""}>
-        <span className="inline-block text-accent font-medium text-sm mb-2">
+        <span 
+          className="inline-block font-medium text-sm mb-2"
+          style={{ color: '#FF9B51' }}
+        >
           {subtitle}
         </span>
-        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+        <h3 
+          className="text-2xl md:text-3xl font-bold mb-4"
+          style={{ color: '#25343F' }}
+        >
           {title}
         </h3>
-        <p className="text-muted-foreground leading-relaxed mb-6">
+        <p 
+          className="leading-relaxed mb-6"
+          style={{ color: '#25343F', opacity: 0.75 }}
+        >
           {description}
         </p>
 
         {/* Subjects */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-3">
-            <BookOpen className="w-5 h-5 text-accent" />
-            <span className="font-medium text-foreground">Subjects Covered</span>
+            <BookOpen 
+              className="w-5 h-5"
+              style={{ color: '#FF9B51' }}
+            />
+            <span 
+              className="font-medium"
+              style={{ color: '#25343F' }}
+            >
+              Subjects Covered
+            </span>
           </div>
           <div className="flex flex-wrap gap-2">
             {subjects.map((subject) => (
               <span
                 key={subject}
-                className="px-3 py-1.5 bg-secondary text-secondary-foreground text-sm rounded-full"
+                className="px-3 py-1.5 text-sm rounded-full"
+                style={{ 
+                  backgroundColor: '#BFC9D1',
+                  color: '#25343F'
+                }}
               >
                 {subject}
               </span>
@@ -65,17 +86,41 @@ const CourseSection = ({
         </div>
       </div>
 
-      <div className={`bg-card rounded-2xl p-6 md:p-8 card-shadow ${isReversed ? "lg:order-1" : ""}`}>
-        <h4 className="font-semibold text-foreground mb-6">Course Details</h4>
+      <div 
+        className={`rounded-2xl p-6 md:p-8 shadow-lg ${isReversed ? "lg:order-1" : ""}`}
+        style={{ backgroundColor: '#FFFFFF' }}
+      >
+        <h4 
+          className="font-semibold mb-6"
+          style={{ color: '#25343F' }}
+        >
+          Course Details
+        </h4>
         <div className="space-y-5">
           {courseDetails.map((detail) => (
             <div key={detail.label} className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                <detail.icon className="w-5 h-5 text-accent" />
+              <div 
+                className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: '#FF9B51' }}
+              >
+                <detail.icon 
+                  className="w-5 h-5"
+                  style={{ color: '#25343F' }}
+                />
               </div>
               <div>
-                <span className="text-sm text-muted-foreground">{detail.label}</span>
-                <p className="font-medium text-foreground">{detail.value}</p>
+                <span 
+                  className="text-sm"
+                  style={{ color: '#BFC9D1' }}
+                >
+                  {detail.label}
+                </span>
+                <p 
+                  className="font-medium"
+                  style={{ color: '#25343F' }}
+                >
+                  {detail.value}
+                </p>
               </div>
             </div>
           ))}
