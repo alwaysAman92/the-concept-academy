@@ -25,22 +25,13 @@ const highlights = [
 
 const HighlightCards = () => {
   return (
-    <section 
-      className="section-padding"
-      style={{ backgroundColor: '#25343F' }}
-    >
+    <section className="section-padding bg-background">
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-12 md:mb-16">
-          <h2 
-            className="text-3xl md:text-4xl font-bold mb-4"
-            style={{ color: '#EAEFEF' }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Why Choose Us?
           </h2>
-          <p 
-            className="max-w-2xl mx-auto text-lg"
-            style={{ color: '#BFC9D1' }}
-          >
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             We're committed to providing an exceptional learning experience that 
             goes beyond textbooks.
           </p>
@@ -50,38 +41,16 @@ const HighlightCards = () => {
           {highlights.map((item, index) => (
             <div
               key={item.title}
-              className="group rounded-xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up"
-              style={{ 
-                backgroundColor: '#EAEFEF',
-                animationDelay: `${index * 0.1}s`,
-                border: '2px solid transparent'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#FF9B51';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'transparent';
-              }}
+              className="group bg-card rounded-xl p-6 md:p-8 card-shadow hover:card-shadow-hover transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div 
-                className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-all duration-300"
-                style={{ backgroundColor: '#FF9B51' }}
-              >
-                <item.icon 
-                  className="w-7 h-7"
-                  style={{ color: '#25343F' }}
-                />
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+                <item.icon className="w-7 h-7 text-foreground" />
               </div>
-              <h3 
-                className="text-lg font-semibold mb-3"
-                style={{ color: '#25343F' }}
-              >
+              <h3 className="text-lg font-semibold text-foreground mb-3">
                 {item.title}
               </h3>
-              <p 
-                className="text-sm leading-relaxed"
-                style={{ color: '#25343F', opacity: 0.75 }}
-              >
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
             </div>

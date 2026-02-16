@@ -12,21 +12,12 @@ const Contact = () => {
   return (
     <Layout>
       {/* Header */}
-      <section 
-        className="py-16 md:py-20"
-        style={{ backgroundColor: '#25343F' }}
-      >
+      <section className="hero-gradient text-primary-foreground py-16 md:py-20">
         <div className="max-w-7xl mx-auto container-padding text-center">
-          <h1 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-            style={{ color: '#EAEFEF' }}
-          >
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Contact Us
           </h1>
-          <p 
-            className="max-w-2xl mx-auto"
-            style={{ color: '#BFC9D1' }}
-          >
+          <p className="text-primary-foreground/80 max-w-2xl mx-auto">
             Have questions? We'd love to hear from you. Reach out to us and 
             we'll respond as soon as we can.
           </p>
@@ -34,50 +25,27 @@ const Contact = () => {
       </section>
 
       {/* Content */}
-      <section 
-        className="section-padding"
-        style={{ backgroundColor: '#EAEFEF' }}
-      >
+      <section className="section-padding bg-background">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Info */}
             <div>
-              <h2 
-                className="text-2xl md:text-3xl font-bold mb-6"
-                style={{ color: '#25343F' }}
-              >
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
                 Get in Touch
               </h2>
-              <p 
-                className="mb-8"
-                style={{ color: '#25343F', opacity: 0.75 }}
-              >
+              <p className="text-muted-foreground mb-8">
                 Visit us at our center, call us, or send an enquiry. We're here to 
                 help you make the right decision for your child's education.
               </p>
 
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: '#FF9B51' }}
-                  >
-                    <MapPin 
-                      className="w-6 h-6"
-                      style={{ color: '#25343F' }}
-                    />
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 
-                      className="font-semibold mb-1"
-                      style={{ color: '#25343F' }}
-                    >
-                      Address
-                    </h3>
-                    <p 
-                      className="text-sm"
-                      style={{ color: '#BFC9D1' }}
-                    >
+                    <h3 className="font-semibold text-foreground mb-1">Address</h3>
+                    <p className="text-muted-foreground text-sm">
                       123 Education Lane,<br />
                       Knowledge City, State - 123456
                     </p>
@@ -85,26 +53,14 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: '#FF9B51' }}
-                  >
-                    <Phone 
-                      className="w-6 h-6"
-                      style={{ color: '#25343F' }}
-                    />
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 
-                      className="font-semibold mb-1"
-                      style={{ color: '#25343F' }}
-                    >
-                      Phone
-                    </h3>
+                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
                     <a
                       href="tel:+919876543210"
-                      className="text-sm transition-colors hover:opacity-80"
-                      style={{ color: '#BFC9D1' }}
+                      className="text-muted-foreground text-sm hover:text-accent transition-colors"
                     >
                       +91 98765 43210
                     </a>
@@ -112,26 +68,14 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: '#FF9B51' }}
-                  >
-                    <Mail 
-                      className="w-6 h-6"
-                      style={{ color: '#25343F' }}
-                    />
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 
-                      className="font-semibold mb-1"
-                      style={{ color: '#25343F' }}
-                    >
-                      Email
-                    </h3>
+                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
                     <a
                       href="mailto:info@conceptacademy.com"
-                      className="text-sm transition-colors hover:opacity-80"
-                      style={{ color: '#BFC9D1' }}
+                      className="text-muted-foreground text-sm hover:text-accent transition-colors"
                     >
                       info@conceptacademy.com
                     </a>
@@ -143,8 +87,7 @@ const Contact = () => {
               <Button
                 asChild
                 size="lg"
-                className="hover:opacity-90 text-white w-full sm:w-auto shadow-md hover:shadow-lg transition-all"
-                style={{ backgroundColor: '#25D366' }}
+                className="bg-[#25D366] hover:bg-[#25D366]/90 text-white w-full sm:w-auto"
               >
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
@@ -158,29 +101,14 @@ const Contact = () => {
               </Button>
 
               {/* Map Placeholder */}
-              <div 
-                className="mt-8 rounded-xl overflow-hidden border"
-                style={{ borderColor: '#BFC9D1' }}
-              >
-                <div 
-                  className="aspect-video flex items-center justify-center"
-                  style={{ backgroundColor: '#FFFFFF' }}
-                >
+              <div className="mt-8 rounded-xl overflow-hidden border border-border">
+                <div className="aspect-video bg-muted flex items-center justify-center">
                   <div className="text-center p-8">
-                    <MapPin 
-                      className="w-12 h-12 mx-auto mb-3"
-                      style={{ color: '#BFC9D1', opacity: 0.4 }}
-                    />
-                    <p 
-                      className="text-sm"
-                      style={{ color: '#BFC9D1' }}
-                    >
+                    <MapPin className="w-12 h-12 text-muted-foreground/40 mx-auto mb-3" />
+                    <p className="text-muted-foreground text-sm">
                       Google Maps embed will appear here
                     </p>
-                    <p 
-                      className="text-xs mt-1"
-                      style={{ color: '#BFC9D1', opacity: 0.6 }}
-                    >
+                    <p className="text-muted-foreground/60 text-xs mt-1">
                       (Add your Google Maps embed code)
                     </p>
                   </div>

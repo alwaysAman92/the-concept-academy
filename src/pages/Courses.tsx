@@ -56,21 +56,12 @@ const Courses = () => {
   return (
     <Layout>
       {/* Header */}
-      <section 
-        className="py-16 md:py-20"
-        style={{ backgroundColor: '#25343F' }}
-      >
+      <section className="hero-gradient text-primary-foreground py-16 md:py-20">
         <div className="max-w-7xl mx-auto container-padding text-center">
-          <h1 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-            style={{ color: '#EAEFEF' }}
-          >
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Our Courses
           </h1>
-          <p 
-            className="max-w-2xl mx-auto"
-            style={{ color: '#BFC9D1' }}
-          >
+          <p className="text-primary-foreground/80 max-w-2xl mx-auto">
             Comprehensive programs designed to help students excel in academics 
             and competitive exams through concept-based learning.
           </p>
@@ -78,10 +69,7 @@ const Courses = () => {
       </section>
 
       {/* Course Sections */}
-      <section 
-        className="section-padding"
-        style={{ backgroundColor: '#EAEFEF' }}
-      >
+      <section className="section-padding bg-background">
         <div className="max-w-7xl mx-auto container-padding space-y-16 md:space-y-24">
           {coursesData.map((course, index) => (
             <div
