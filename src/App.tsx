@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Admin from "@/pages/Admin";
 import AdminLogin from "@/pages/AdminLogin";
+import TestimonialsSection from "./components/home/TestimonialsSection";
 
 
 
@@ -29,7 +30,7 @@ const App = () => (
           <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/admin-login" element={<AdminLogin />} />
-
+          <Route path="/testimonials" element={<TestimonialsSection />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

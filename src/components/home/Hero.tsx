@@ -12,7 +12,7 @@ const Hero = () => {
             <div className="inline-block px-4 py-1.5 bg-primary-foreground/10 rounded-full text-sm font-medium mb-6">
               Classes 9–12 | JEE | NEET
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
               Strong Concepts.
               <br />
               <span className="text-accent">Strong Results.</span>

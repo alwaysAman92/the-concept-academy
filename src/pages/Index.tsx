@@ -4,12 +4,15 @@ import HighlightCards from "@/components/home/HighlightCards";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+
 
 const Index = () => {
   return (
     <Layout>
       <Hero />
       <HighlightCards />
+        <TestimonialsSection />
       
       {/* CTA Section */}
       <section className="section-padding bg-muted">
