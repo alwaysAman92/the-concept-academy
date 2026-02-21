@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { Star, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 type Testimonial = {
   id: string;
@@ -167,14 +168,21 @@ const TestimonialsSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-14">
-          <Link
-            to="/testimonials"
-            className="inline-flex items-center gap-2 text-primary hover:opacity-80 transition text-sm font-medium"
-          >
-            View All Testimonials →
-          </Link>
-        </div>
+        {/* CTA */}
+<div className="text-center mt-14 flex flex-col sm:flex-row items-center justify-center gap-4">
+  <Link
+    to="/testimonials"
+    className="inline-flex items-center gap-2 text-primary hover:opacity-80 transition text-sm font-medium"
+  >
+    View All Testimonials →
+  </Link>
+
+  <Link to="/submit-testimonial">
+    <Button className="bg-gradient-to-r from-primary to-orange-500 text-white hover:opacity-90">
+      Share Your Experience
+    </Button>
+  </Link>
+</div>
       </div>
     </section>
   );
