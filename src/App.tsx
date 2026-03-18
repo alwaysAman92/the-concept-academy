@@ -12,6 +12,7 @@ import Admin from "@/pages/Admin";
 import AdminLogin from "@/pages/AdminLogin";
 import TestimonialsSection from "./components/home/TestimonialsSection";
 import SubmitTestimonial from "@/pages/SubmitTestimonial";
+import FeePayment from "@/pages/FeePayment";
 
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/testimonials" element={<TestimonialsSection />} />
           <Route path="/submit-testimonial" element={<SubmitTestimonial />} />
+          <Route path="/fee-payment" element={<FeePayment />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
